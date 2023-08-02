@@ -144,16 +144,19 @@ const PaymentPage = () => {
           <div>{totalPrice}</div>
         </div>
         <div>
-        <Link
-          to="/ordered"
-          className={`text-white border bg-gray-700 hover:bg-gray-600 px-2 rounded-md p-1 font-bold ${
-            isFormValid() ? '' : 'opacity-50 cursor-not-allowed'
-          }`}
-          onClick={handlePaymentSubmit}
-          disabled={!isFormValid()} // Disable the button when the form is not valid
-        >
-          Submit Payment
-        </Link>
+          {isFormValid() ? (
+            <Link
+              to="/ordered"
+              className='text-white border bg-gray-700 hover:bg-gray-600 px-2 rounded-md p-1 font-bold'
+              onClick={handlePaymentSubmit}
+            >
+              Submit Payment
+            </Link>
+          ) : (
+            <div className='text-white border bg-gray-700 opacity-50 cursor-not-allowed px-2 rounded-md p-1 font-bold'>
+              Submit Payment
+            </div>
+          )}
         </div>
       </div>
     </div>
