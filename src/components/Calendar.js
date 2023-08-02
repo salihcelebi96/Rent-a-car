@@ -6,8 +6,6 @@ import { useSelector, useDispatch } from 'react-redux';
 const Calendar = () => {
   const dispatch = useDispatch();
 
-
-
   const [startDate, setStartDate] = useState(null);
   const [endDate, setEndDate] = useState(null);
   const [selectedDays, setSelectedDays] = useState(0);
@@ -37,36 +35,36 @@ const Calendar = () => {
   }, [totalPrice, dispatch]);
 
   return (
-    <div className="w-full justify-center items-center gap-8 flex my-10">
-      <div className='border rounded-md bg-green-800 p-3'>
-        <h2 className='py-2   text-white font-semibold'>Başlangıç Tarihi Seçin:</h2>
-        <DatePicker className='cursor-pointer' selected={startDate} onChange={handleStartDateChange} />
+    <div className="w-full flex-col   gap-8 justify-center items-center  my-10">
+      <div className='flex  justify-center'>
+      <div className='border w-full flex flex-col items-center lg:w-72 rounded-md bg-green-800 p-3'>
+        <h2 className=' text-white font-semibold'>Başlangıç Tarihi Seçin:</h2>
+        <DatePicker className='cursor-pointer border rounded-sm' selected={startDate} onChange={handleStartDateChange} />
       </div>
-      <div className='border rounded-md bg-green-800 p-3'>
-        <h2 className='text-white   py-2 font-semibold'>Bitiş Tarihi Seçin:</h2>
-        <DatePicker className='cursor-pointer' selected={endDate} onChange={handleEndDateChange} />
+      <div className='border w-full flex flex-col items-center lg:w-72 rounded-md bg-green-800 p-3'>
+        <h2 className='text-white  font-semibold'>Bitiş Tarihi Seçin:</h2>
+        <DatePicker className='cursor-pointer border rounded-sm' selected={endDate} onChange={handleEndDateChange} />
       </div>
-      <div className='flex gap-5'>
-        <div className='bg-gray-700  border p-3 w-72 rounded-sm text-white'>
-          <h2>Seçilen Başlangıç Tarihi : {startDate ? startDate.toLocaleDateString() : '-'}</h2>
+      </div>
+     
+      
+      <div className='flex flex-col  justify-center my-5 gap-5 lg:flex-row sm:flex-col'>
+        <div className='bg-gray-700 border p-3 w-72 rounded-sm text-white'>
+          <h2>Seçilen Başlangıç Tarihi: {startDate ? startDate.toLocaleDateString() : '-'}</h2>
         </div>
-        <div className='bg-gray-700 border  w-72 p-3 rounded-sm text-white'>
-          <h2>Seçilen Bitiş Tarihi : {endDate ? endDate.toLocaleDateString() : '-'}</h2>
+        <div className='bg-gray-700 border p-3 w-72 rounded-sm text-white'>
+          <h2>Seçilen Bitiş Tarihi: {endDate ? endDate.toLocaleDateString() : '-'}</h2>
         </div>
-        <div className='bg-gray-700 border  w-72 p-3 rounded-sm text-white'>
-          <h2>Seçilen Gün Sayısı : {selectedDays}</h2>
+        <div className='bg-gray-700 border p-3 w-72 rounded-sm text-white'>
+          <h2>Seçilen Gün Sayısı: {selectedDays}</h2>
         </div>
-        <div className='bg-gray-700 border flex  w-72 p-3 rounded-sm text-white'>
-          <div>
-            Toplam Fiyat :
-          </div>
+        <div className='bg-gray-700 border flex p-3 w-72 rounded-sm text-white'>
+          <div>Toplam Fiyat:</div>
           <div className='px-1 text-yellow-500'>
             ${totalPrice}
           </div>
-          
         </div>
-
-       </div>
+      </div>
     </div>
   );
 };

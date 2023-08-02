@@ -74,7 +74,7 @@ const PaymentPage = () => {
 
   return (
     <div className='flex justify-center items-center '>
-      <div className='w-96  flex flex-col mt-14 border p-5 items-center gap-3 '>
+      <div className='w-96  flex flex-col mt-14 border border-blue-800 p-5 items-center gap-3 '>
         <div>
           <h1 className='text-3xl'>Pay with card</h1>
         </div>
