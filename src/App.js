@@ -9,6 +9,7 @@ import Navbar from './components/Navbar';
 import PaymentPage from './pages/PaymentPage';
 import Ordered from "./pages/Ordered";
 
+
 const App = () => {
   return (
     <Router>
