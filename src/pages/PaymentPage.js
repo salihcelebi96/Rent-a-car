@@ -28,9 +28,9 @@ const PaymentPage = () => {
   };
 
   const handleExpiryDateChange = (e) => {
-    const input = e.target.value.replace(/\D/g, ''); // Remove non-digit characters
+    const input = e.target.value.replace(/\D/g, ''); 
     if (input.length > 2) {
-      // Add a slash after the second digit (month)
+      
       setExpiryDate(input.slice(0, 2) + '/' + input.slice(2));
     } else {
       setExpiryDate(input);
@@ -38,13 +38,13 @@ const PaymentPage = () => {
   };
 
   const handleCardNumberChange = (e) => {
-    const input = e.target.value.replace(/\D/g, ''); // Remove non-digit characters
-    const formattedInput = input.replace(/(\d{4})(?=\d)/g, '$1 '); // Add a space after every 4 digits
+    const input = e.target.value.replace(/\D/g, ''); 
+    const formattedInput = input.replace(/(\d{4})(?=\d)/g, '$1 '); 
     setCardNumber(formattedInput);
   };
 
   const handlePaymentSubmit = () => {
-    // Dispatch the data to the paymentReducer in Redux
+    
     dispatch({ type: 'SET_EMAIL', payload: email });
     dispatch({ type: 'SET_CARD_NUMBER', payload: cardNumber });
     dispatch({ type: 'SET_EXPIRY_DATE', payload: expiryDate });
@@ -101,8 +101,8 @@ const PaymentPage = () => {
             name="cardNumber"
             value={cardNumber}
             onChange={handleCardNumberChange}
-            maxLength="19" // Maximum length for formatted input (16 digits + 3 spaces)
-            placeholder="xxxx xxxx xxxx xxxx" // Example format with spaces
+            maxLength="19"
+            placeholder="xxxx xxxx xxxx xxxx" 
             required
           />
           </div>

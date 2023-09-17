@@ -9,12 +9,12 @@ const Slider = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
   useEffect(() => {
-    // Set an interval to slide automatically every 3 seconds
+    
     const interval = setInterval(() => {
       setCurrentSlide((prevSlide) => (prevSlide + 1) % images.length);
     }, 3000);
 
-    // Clear the interval when the component unmounts
+    
     return () => {
       clearInterval(interval);
     };

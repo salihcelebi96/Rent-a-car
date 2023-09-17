@@ -2,14 +2,14 @@ import React from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
 const Detail = () => {
-  const selectedCar = useSelector((state) => state.selectedCar); // Redux Store'dan seçilen araba verilerini alıyoruz
+  const selectedCar = useSelector((state) => state.selectedCar); 
   console.log(selectedCar)
-  // Seçilen araba boşsa veya seçilen araba yoksa "No car selected" mesajını gösterelim
+ 
   if (!selectedCar) {
     return <div>No car selected</div>; 
   }
 
-  // Seçilen araba varsa, seçilen araba verilerini gösteren bir kart oluşturalım
+  
   return (
     <div className='w-ful flex justify-center my-10'>
       <div className='mt-6 w-96 bg-white flex flex-col   shadow-lg rounded-lg overflow-hidden'>
