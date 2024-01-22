@@ -11,7 +11,7 @@ const Navbar = () => {
 
             <Link to="/" className="flex items-center text-white">
             <AiFillCar size={32} className="text-white mr-2" />
-            <h1 className="text-white text-xl font-bold">Rent a Car</h1>
+            <h1 className="text-white sm:text-base  md:text-xl font-bold">Rent a Car</h1>
           </Link>
         </div>
         <ul className="flex space-x-4">
