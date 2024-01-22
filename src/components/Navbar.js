@@ -25,11 +25,7 @@ const Navbar = () => {
               About
             </Link>
           </li>
-          <li>
-          <ScrollLink to="/card" smooth={true} duration={500} className="text-white hover:text-gray-400">
-              Cars
-            </ScrollLink>
-          </li>
+          
           <li>
             <Link to="/contact" className="text-white hover:text-gray-400">
               Contact
