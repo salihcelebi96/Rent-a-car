@@ -37,11 +37,11 @@ const Calendar = () => {
   return (
     <div className="w-full  flex-col   gap-8 justify-center items-center  my-10">
       <div className='flex  justify-center'>
-        <div className='border  flex flex-col items-center md:w-72 sm:w-40 rounded-md bg-green-800 p-3'>
+        <div className='border  flex flex-col items-center md:w-72 sm:w-full rounded-md bg-green-800 p-3'>
           <h2 className=' text-white font-semibold'>Başlangıç Tarihi Seçin:</h2>
           <DatePicker className='cursor-pointer border rounded-sm' selected={startDate} onChange={handleStartDateChange} />
         </div>
-        <div className='border w-full flex flex-col items-center md:w-72 sm:w-40 rounded-md bg-green-800 p-3'>
+        <div className='border w-full flex flex-col items-center md:w-72 sm:w-full rounded-md bg-green-800 p-3'>
           <h2 className='text-white  font-semibold'>Bitiş Tarihi Seçin:</h2>
           <DatePicker className='cursor-pointer border rounded-sm' selected={endDate} onChange={handleEndDateChange} />
         </div>
