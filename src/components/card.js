@@ -65,7 +65,7 @@ const Cars = () => {
   };
 
   return (
-    <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 mx-10 mt-5 gap-6'>
+    <div className='grid lg:grid-cols-3 bg-red-500 md:grid-cols-2 sm:grid-cols-1  mt-5 gap-6'>
       {CarsData.map((car, index) => (
         <div key={index} className="mt-6 w-96 bg-white flex flex-col shadow-lg rounded-lg overflow-hidden">
           <img src={car.image} alt="car" className="h-52 w-full object-cover object-center" />
