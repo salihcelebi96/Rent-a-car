@@ -35,20 +35,20 @@ const Calendar = () => {
   }, [totalPrice, dispatch]);
 
   return (
-    <div className="w-full flex-col   gap-8 justify-center items-center  my-10">
+    <div className="w-full  flex-col   gap-8 justify-center items-center  my-10">
       <div className='flex  justify-center'>
-      <div className='border w-full flex flex-col items-center lg:w-72 rounded-md bg-green-800 p-3'>
-        <h2 className=' text-white font-semibold'>Başlangıç Tarihi Seçin:</h2>
-        <DatePicker className='cursor-pointer border rounded-sm' selected={startDate} onChange={handleStartDateChange} />
+        <div className='border  flex flex-col items-center lg:w-72 sm:w-44 rounded-md bg-green-800 p-3'>
+          <h2 className=' text-white font-semibold'>Başlangıç Tarihi Seçin:</h2>
+          <DatePicker className='cursor-pointer border rounded-sm' selected={startDate} onChange={handleStartDateChange} />
+        </div>
+        <div className='border w-full flex flex-col items-center lg:w-72 sm:w-44 rounded-md bg-green-800 p-3'>
+          <h2 className='text-white  font-semibold'>Bitiş Tarihi Seçin:</h2>
+          <DatePicker className='cursor-pointer border rounded-sm' selected={endDate} onChange={handleEndDateChange} />
+        </div>
       </div>
-      <div className='border w-full flex flex-col items-center lg:w-72 rounded-md bg-green-800 p-3'>
-        <h2 className='text-white  font-semibold'>Bitiş Tarihi Seçin:</h2>
-        <DatePicker className='cursor-pointer border rounded-sm' selected={endDate} onChange={handleEndDateChange} />
-      </div>
-      </div>
-     
-      
-      <div className='flex flex-col  justify-center my-5 gap-5 lg:flex-row sm:flex-col'>
+
+
+      <div className='flex flex-col items-center justify-center my-5 gap-5 lg:flex-row sm:flex-col'>
         <div className='bg-gray-700 border p-3 w-72 rounded-sm text-white'>
           <h2>Seçilen Başlangıç Tarihi: {startDate ? startDate.toLocaleDateString() : '-'}</h2>
         </div>
