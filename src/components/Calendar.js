@@ -35,17 +35,18 @@ const Calendar = () => {
   }, [totalPrice, dispatch]);
 
   return (
-    <div className="w-full  flex-col   gap-8 justify-center items-center  my-10">
-      <div className='flex  justify-center'>
-        <div className='border  flex flex-col items-center md:w-72 sm:w-full rounded-md bg-green-800 p-3'>
-          <h2 className=' text-white font-semibold'>Başlangıç Tarihi Seçin:</h2>
-          <DatePicker className='cursor-pointer border rounded-sm' selected={startDate} onChange={handleStartDateChange} />
-        </div>
-        <div className='border w-full flex flex-col items-center md:w-72 sm:w-full rounded-md bg-green-800 p-3'>
-          <h2 className='text-white  font-semibold'>Bitiş Tarihi Seçin:</h2>
-          <DatePicker className='cursor-pointer border rounded-sm' selected={endDate} onChange={handleEndDateChange} />
-        </div>
-      </div>
+    <div className="w-full  flex flex-col   gap-8 justify-center items-center  my-10">
+    <div className='flex flex-col items-center justify-center sm:flex-col lg:flex-row'>
+  <div className='border p-3 rounded-md bg-green-800 mb-4 sm:mb-0 lg:mr-4'>
+    <h2 className='text-white font-semibold'>Başlangıç Tarihi Seçin:</h2>
+    <DatePicker className='cursor-pointer border rounded-sm' selected={startDate} onChange={handleStartDateChange} />
+  </div>
+  <div className='border p-3 rounded-md bg-green-800'>
+    <h2 className='text-white font-semibold'>Bitiş Tarihi Seçin:</h2>
+    <DatePicker className='cursor-pointer border rounded-sm' selected={endDate} onChange={handleEndDateChange} />
+  </div>
+</div>
+
 
 
       <div className='flex flex-col items-center justify-center my-5 gap-5 lg:flex-row sm:flex-col'>
